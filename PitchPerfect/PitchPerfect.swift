@@ -16,20 +16,7 @@ class PitchPerfect: UIViewController, AVAudioRecorderDelegate {
      var audioRecorder: AVAudioRecorder!
     let session = AVAudioSession.sharedInstance()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = #colorLiteral(red: 0.2901960784, green: 0.3803921569, blue: 0.5529411765, alpha: 1)
-        self.setupSubViews()
-        self.navigationController?.navigationBar.isHidden = true
-        self.setNeedsStatusBarAppearanceUpdate()
 
-    }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
-   
     
     //MARK: UI Items
     
@@ -66,6 +53,24 @@ class PitchPerfect: UIViewController, AVAudioRecorderDelegate {
         
         return label
     }()
+    
+    
+    //MARK:Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = #colorLiteral(red: 0.2901960784, green: 0.3803921569, blue: 0.5529411765, alpha: 1)
+        self.setupSubViews()
+        self.navigationController?.navigationBar.isHidden = true
+        self.setNeedsStatusBarAppearanceUpdate()
+        
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    
 
     
     
